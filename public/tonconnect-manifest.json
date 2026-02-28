@@ -1,5 +1,7 @@
 {
-  "url": "https://sdk-demo-app.ston.fi",
-  "name": "SDK (demo)",
-  "iconUrl": "https://static.ston.fi/logo/external-logo.jpg"
+  "url": "https://your-stonfi-app.vercel.app",
+  "name": "STON.fi DEX",
+  "iconUrl": "https://your-stonfi-app.vercel.app/icon.png",
+  "termsOfUseUrl": "https://your-stonfi-app.vercel.app/terms",
+  "privacyPolicyUrl": "https://your-stonfi-app.vercel.app/privacy"
 }

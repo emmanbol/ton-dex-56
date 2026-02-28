@@ -1,28 +1,19 @@
-import type { Metadata } from "next";
-import { unstable_noStore as noStore } from "next/cache";
-import { Inter } from "next/font/google";
-
-import { Header } from "@/components/header";
-import { NavBar } from "@/components/nav-bar";
-import { Toaster } from "@/components/ui/toaster";
-import { ROUTES } from "@/constants";
-import { cn } from "@/lib/utils";
-
-import { Providers } from "./providers";
-import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
-
-const navBarLinks = [
-  { href: ROUTES.swap, label: "Swap" },
-  { href: ROUTES.liquidityProvide, label: "Pools" },
-  /*{ href: ROUTES.liquidityRefund, label: "Liquidity refund" },*/
-  /*{ href: ROUTES.vault, label: "Vault" },*/
-  { href: ROUTES.stake, label: "Stake" },
-];
+import type { Metadata } from 'next';
+import '@/styles/globals.css';
+import { Providers } from '@/components/shared/Providers';
+//import { Navbar } from '@/components/shared/Navbar';
 
 export const metadata: Metadata = {
-  title: "Voodex Exchange",
+  title: 'VooDEX — on TON',
+  description: 'Decentralized exchange on the TON blockchain. Swap, provide liquidity, and stake',
+  icons: {
+    icon: '/favicon.ico',
+  },
+  openGraph: {
+    title: 'VooDEX',
+    description: 'Swap tokens, provide liquidity, and stake on TON',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({
@@ -30,18 +21,19 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  noStore();
-
   return (
     <html lang="en">
-      <body className={cn(inter.className, "flex flex-col min-h-[100svh]")}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+      </head>
+      <body>
+
         <Providers>
-          <Header />
-          <NavBar className="mx-auto" links={navBarLinks} />
-          <main className="container flex flex-col flex-1 h-full py-10">
-            {children}
-          </main>
-          <Toaster />
+          {/*<Navbar />*/}
+          
+          {children}
+
         </Providers>
       </body>
     </html>

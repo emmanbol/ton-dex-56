@@ -1,11 +1,13 @@
-import { redirect } from "next/navigation";
+/*import { redirect } from 'next/navigation';
 
-/*export default async function Home() {
-  redirect("/swap");
+export default function Page() {
+  redirect('/swap');
 }*/
 
-const dugu = "/swap"
+'use client';
 
-export default async function HomePage(){
-  redirect(dugu)
+import { DEXApp } from '@/components/DEXApp';
+
+export default function HomePagip() {
+  return <DEXApp />;
 }
