@@ -24,7 +24,8 @@ function TonConnectProvider({ children }: { children: React.ReactNode }) {
         theme: THEME.LIGHT,
       }}
       //manifestUrl="https://sdk-demo-app.ston.fi/tonconnect-manifest.json"
-      manifestUrl="https://guud.online/jettons/tonconnect-manifest.json"
+      //manifestUrl="https://guud.online/jettons/tonconnect-manifest.json"
+	manifestUrl="https://ton-dex-56.vercel.app/tonconnect-manifest.json"
     >
       {children}
     </TonConnectUIProvider>
