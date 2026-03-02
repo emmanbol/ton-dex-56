@@ -64,12 +64,12 @@ export function Header() {
           {/* Logo */}
           <Link href={ROUTES.swap} style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0 }}>
             <Image
-              src="/icons/voodex-logo-light.png"
+              src="/icons/voodex-logo-light9.png"
               width={148}
               height={160}
               alt="VOODEX"
               style={{ objectFit: 'contain', height: 44, width: 'auto' }}
-            />
+            />  <span style={{ marginLeft: '10px'}}><b>VOODEX</b></span>
           </Link>
 
           {/* Desktop nav */}
